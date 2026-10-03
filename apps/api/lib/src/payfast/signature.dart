@@ -87,8 +87,14 @@ class PayFastSignature {
       if (component.isEmpty) throw const FormatException('Empty form field');
       final int separator = component.indexOf('=');
       if (separator <= 0) throw const FormatException('Malformed form field');
-      final String name = Uri.decodeQueryComponent(component.substring(0, separator));
-      final String value = Uri.decodeQueryComponent(component.substring(separator + 1));
+      final String name;
+      final String value;
+      try {
+        name = Uri.decodeQueryComponent(component.substring(0, separator));
+        value = Uri.decodeQueryComponent(component.substring(separator + 1));
+      } on ArgumentError {
+        throw FormatException('Invalid URL encoding in form field', component);
+      }
       if (name.isEmpty || !names.add(name)) {
         throw const FormatException('Empty or duplicate form field name');
       }

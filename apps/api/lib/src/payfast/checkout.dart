@@ -51,8 +51,10 @@ class PayFastCheckout {
     return result;
   }
 
-  static Uri _returnUri(Uri origin, String state) =>
-      origin.replace(queryParameters: <String, String>{'checkout': state});
+  static Uri _returnUri(Uri origin, String state) => origin.replace(
+        path: origin.path.isEmpty ? '/' : origin.path,
+        queryParameters: <String, String>{'checkout': state},
+      );
 
   static String _dateOnly(DateTime value) {
     final DateTime utc = value.toUtc();
