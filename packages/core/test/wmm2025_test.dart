@@ -5,20 +5,21 @@ void main() {
   group('WMM2025 NOAA reference values', () {
     // NOAA/NCEI WMM2025_TEST_VALUES.txt. The source publishes the displayed
     // declinations to 0.01 degrees; the required acceptance tolerance is 0.1.
+    // NOAA's 240° east longitude is represented as -120° for GeoPoint.
     const List<({double year, double altitudeKm, double lat, double lng, double d})>
         cases = <({double year, double altitudeKm, double lat, double lng, double d})>[
       (year: 2025.0, altitudeKm: 0, lat: 80, lng: 0, d: 1.28),
       (year: 2025.0, altitudeKm: 0, lat: 0, lng: 120, d: -0.16),
-      (year: 2025.0, altitudeKm: 0, lat: -80, lng: 240, d: 68.78),
+      (year: 2025.0, altitudeKm: 0, lat: -80, lng: -120, d: 68.78),
       (year: 2025.0, altitudeKm: 100, lat: 80, lng: 0, d: 0.85),
       (year: 2025.0, altitudeKm: 100, lat: 0, lng: 120, d: -0.15),
-      (year: 2025.0, altitudeKm: 100, lat: -80, lng: 240, d: 68.21),
+      (year: 2025.0, altitudeKm: 100, lat: -80, lng: -120, d: 68.21),
       (year: 2027.5, altitudeKm: 0, lat: 80, lng: 0, d: 2.59),
       (year: 2027.5, altitudeKm: 0, lat: 0, lng: 120, d: -0.24),
-      (year: 2027.5, altitudeKm: 0, lat: -80, lng: 240, d: 68.49),
+      (year: 2027.5, altitudeKm: 0, lat: -80, lng: -120, d: 68.49),
       (year: 2027.5, altitudeKm: 100, lat: 80, lng: 0, d: 2.16),
       (year: 2027.5, altitudeKm: 100, lat: 0, lng: 120, d: -0.23),
-      (year: 2027.5, altitudeKm: 100, lat: -80, lng: 240, d: 67.93),
+      (year: 2027.5, altitudeKm: 100, lat: -80, lng: -120, d: 67.93),
     ];
 
     for (final value in cases) {

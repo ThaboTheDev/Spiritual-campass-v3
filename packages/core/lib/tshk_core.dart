@@ -1,5 +1,3 @@
-library tshk_core;
-
 export 'src/compass_state.dart';
 export 'src/constants.dart';
 export 'src/entitlement.dart';
