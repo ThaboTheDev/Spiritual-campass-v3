@@ -342,7 +342,6 @@ class EmailSentScreen extends StatelessWidget {
         ],
       ),
     );
-  }
 }
 
 class _AuthScaffold extends StatelessWidget {

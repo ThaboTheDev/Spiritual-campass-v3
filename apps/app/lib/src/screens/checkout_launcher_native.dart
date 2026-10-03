@@ -35,7 +35,7 @@ class _CheckoutFormViewState extends State<CheckoutFormView> {
           onPageStarted: (_) => setState(() => _loading = true),
           onPageFinished: (_) => setState(() => _loading = false),
           onWebResourceError: (WebResourceError error) {
-            if (!error.isForMainFrame) return;
+            if (error.isForMainFrame != true) return;
             setState(() {
               _loading = false;
               _error = 'The secure payment page could not be loaded.';
@@ -44,7 +44,7 @@ class _CheckoutFormViewState extends State<CheckoutFormView> {
           onNavigationRequest: (NavigationRequest request) {
             final Uri uri = Uri.tryParse(request.url) ?? Uri();
             final String? result = uri.queryParameters['checkout'];
-            if (result == 'return' || result == 'cancel') {
+            if (result != null && (result == 'return' || result == 'cancel')) {
               widget.onResult(result);
               return NavigationDecision.prevent;
             }

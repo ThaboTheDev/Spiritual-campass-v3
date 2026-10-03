@@ -16,7 +16,7 @@ Future<void> main() async {
   try {
     await Supabase.initialize(
       url: config.supabaseUrl,
-      anonKey: config.supabaseAnonKey,
+      publishableKey: config.supabaseAnonKey,
     );
   } catch (_) {
     runApp(const _ConfigurationRequiredApp());

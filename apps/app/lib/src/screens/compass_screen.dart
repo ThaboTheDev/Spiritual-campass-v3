@@ -7,6 +7,7 @@ import 'package:tshk_core/tshk_core.dart';
 
 import '../compass/compass_controller.dart';
 import '../location/location_models.dart';
+import '../providers/app_providers.dart';
 import '../providers/compass_providers.dart';
 import '../sensors/lifecycle_sensor_controller.dart';
 
@@ -557,7 +558,7 @@ class _CompassDialPainter extends CustomPainter {
     canvas.drawCircle(center, 5, Paint()..color = foreground);
   }
 
-  void _drawCardinal(Canvas canvas, Offset center, double radius, String label, int degrees) {
+  void _drawCardinal(Canvas canvas, Offset center, double radius, String label, double degrees) {
     final double angle = (degrees - 90) * math.pi / 180;
     final Offset position = center +
         Offset(math.cos(angle) * (radius - 30), math.sin(angle) * (radius - 30));
