@@ -1,0 +1,41 @@
+# Dart / Flutter outputs
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Generated platform configuration and local SDK paths
+apps/app/android/local.properties
+apps/app/ios/Flutter/Generated.xcconfig
+apps/app/ios/Flutter/flutter_export_environment.sh
+apps/app/ios/Flutter/ephemeral/
+apps/app/ios/Pods/
+apps/app/ios/.symlinks/
+apps/app/ios/Runner/GeneratedPluginRegistrant.*
+apps/app/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Native build output
+.gradle/
+**/.gradle/
+**/DerivedData/
+*.xcuserstate
+**/xcuserdata/
+
+# Local credentials and environment files
+.env
+.env.*.local
+apps/api/.env
+supabase/.env
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

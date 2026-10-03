@@ -1,0 +1,53 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+    100000000000000000000001 /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    100000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+    100000000000000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+    100000000000000000000004 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
+    100000000000000000000005 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+    100000000000000000000006 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+    100000000000000000000007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+    100000000000000000000008 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+    100000000000000000000009 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+    10000000000000000000000A /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppFrameworkInfo.plist; sourceTree = "<group>"; };
+    10000000000000000000000B /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+
+    200000000000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000002 /* AppDelegate.swift */; };
+    200000000000000000000002 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000000B /* GeneratedPluginRegistrant.m */; };
+    200000000000000000000003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000005 /* Main.storyboard */; };
+    200000000000000000000004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000006 /* LaunchScreen.storyboard */; };
+    200000000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000007 /* Assets.xcassets */; };
+
+    300000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (200000000000000000000001 /* AppDelegate.swift in Sources */, 200000000000000000000002 /* GeneratedPluginRegistrant.m in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+    300000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    300000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (200000000000000000000003 /* Main.storyboard in Resources */, 200000000000000000000004 /* LaunchScreen.storyboard in Resources */, 200000000000000000000005 /* Assets.xcassets in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+    300000000000000000000004 /* Run Flutter Build */ = {isa = PBXShellScriptBuildPhase; buildActionMask = 2147483647; files = (); inputPaths = (); name = "Run Flutter Build"; outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build"; };
+    300000000000000000000005 /* Embed Flutter Frameworks */ = {isa = PBXShellScriptBuildPhase; buildActionMask = 2147483647; files = (); inputPaths = (); name = "Embed Flutter Frameworks"; outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin"; };
+
+    400000000000000000000001 /* Runner */ = {isa = PBXGroup; children = (400000000000000000000002 /* Runner */, 400000000000000000000003 /* Flutter */, 400000000000000000000004 /* Products */,); sourceTree = "<group>"; };
+    400000000000000000000002 /* Runner */ = {isa = PBXGroup; children = (100000000000000000000002 /* AppDelegate.swift */, 10000000000000000000000B /* GeneratedPluginRegistrant.m */, 100000000000000000000003 /* Info.plist */, 100000000000000000000004 /* Runner.entitlements */, 400000000000000000000005 /* Base.lproj */, 100000000000000000000007 /* Assets.xcassets */,); path = Runner; sourceTree = "<group>"; };
+    400000000000000000000003 /* Flutter */ = {isa = PBXGroup; children = (100000000000000000000008 /* Debug.xcconfig */, 100000000000000000000009 /* Release.xcconfig */, 10000000000000000000000A /* AppFrameworkInfo.plist */,); path = Flutter; sourceTree = "<group>"; };
+    400000000000000000000004 /* Products */ = {isa = PBXGroup; children = (100000000000000000000001 /* Runner.app */,); name = Products; sourceTree = "<group>"; };
+    400000000000000000000005 /* Base.lproj */ = {isa = PBXGroup; children = (100000000000000000000005 /* Main.storyboard */, 100000000000000000000006 /* LaunchScreen.storyboard */,); path = Base.lproj; sourceTree = "<group>"; };
+
+    500000000000000000000001 /* Runner */ = {isa = PBXNativeTarget; buildConfigurationList = 800000000000000000000002 /* Runner target configuration list */; buildPhases = (300000000000000000000001 /* Sources */, 300000000000000000000002 /* Frameworks */, 300000000000000000000003 /* Resources */, 300000000000000000000004 /* Run Flutter Build */, 300000000000000000000005 /* Embed Flutter Frameworks */,); buildRules = (); dependencies = (); name = Runner; productName = Runner; productReference = 100000000000000000000001 /* Runner.app */; productType = "com.apple.product-type.application"; };
+
+    600000000000000000000001 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1600; ORGANIZATIONNAME = TSHK; TargetAttributes = {500000000000000000000001 = {CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = 800000000000000000000001 /* Project configuration list */; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base,); mainGroup = 400000000000000000000001 /* Runner */; productRefGroup = 400000000000000000000004 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (500000000000000000000001 /* Runner */,); };
+
+    600000000000000000000002 /* Debug project settings */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CLANG_CXX_LANGUAGE_STANDARD = "gnu++20"; IPHONEOS_DEPLOYMENT_TARGET = 13.0; SDKROOT = iphoneos; }; name = Debug; };
+    600000000000000000000003 /* Release project settings */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CLANG_CXX_LANGUAGE_STANDARD = "gnu++20"; IPHONEOS_DEPLOYMENT_TARGET = 13.0; SDKROOT = iphoneos; }; name = Release; };
+    600000000000000000000004 /* Profile project settings */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CLANG_CXX_LANGUAGE_STANDARD = "gnu++20"; IPHONEOS_DEPLOYMENT_TARGET = 13.0; SDKROOT = iphoneos; }; name = Profile; };
+
+    700000000000000000000001 /* Debug app settings */ = {isa = XCBuildConfiguration; baseConfigurationReference = 100000000000000000000008 /* Debug.xcconfig */; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Runner/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 13.0; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",); PRODUCT_BUNDLE_IDENTIFIER = za.co.tshk.compass; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+    700000000000000000000002 /* Release app settings */ = {isa = XCBuildConfiguration; baseConfigurationReference = 100000000000000000000009 /* Release.xcconfig */; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Runner/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 13.0; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",); PRODUCT_BUNDLE_IDENTIFIER = za.co.tshk.compass; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+    700000000000000000000003 /* Profile app settings */ = {isa = XCBuildConfiguration; baseConfigurationReference = 100000000000000000000009 /* Release.xcconfig */; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements; CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)"; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Runner/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 13.0; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",); PRODUCT_BUNDLE_IDENTIFIER = za.co.tshk.compass; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Profile; };
+
+    800000000000000000000001 /* Project configuration list */ = {isa = XCConfigurationList; buildConfigurations = (600000000000000000000002 /* Debug project settings */, 600000000000000000000003 /* Release project settings */, 600000000000000000000004 /* Profile project settings */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    800000000000000000000002 /* Runner target configuration list */ = {isa = XCConfigurationList; buildConfigurations = (700000000000000000000001 /* Debug app settings */, 700000000000000000000002 /* Release app settings */, 700000000000000000000003 /* Profile app settings */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+  };
+  rootObject = 600000000000000000000001 /* Project object */;
+}

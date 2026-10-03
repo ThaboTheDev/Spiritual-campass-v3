@@ -1,0 +1,30 @@
+project_id = "tshk-compass-subscription"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+major_version = 15
+
+[db.seed]
+enabled = false
+sql_paths = ["./seed/seed_centres.sql"]
+
+[auth]
+enabled = true
+site_url = "http://localhost:8080"
+additional_redirect_urls = [
+  "http://localhost:8080/auth/callback",
+  "https://localhost:8080/auth/callback",
+  "tshkcompass://auth/callback"
+]
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false
+
+# Also turn off email confirmations in the hosted Supabase Dashboard:
+# Authentication -> Providers -> Email -> Confirm email = OFF.
