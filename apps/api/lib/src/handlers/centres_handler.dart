@@ -7,7 +7,6 @@ import 'package:tshk_core/tshk_core.dart';
 import '../auth/jwt_verifier.dart';
 import '../data/compass_repository.dart';
 import '../http/handler_auth.dart';
-import '../http/json_response.dart';
 
 Handler centresHandler({
   required JwtVerifier jwtVerifier,

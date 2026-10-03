@@ -72,7 +72,7 @@ Handler createApiHandler({
       ),
     );
 
-  final Handler withJsonNotFound = (Request request) async {
+  Future<Response> withJsonNotFound(Request request) async {
     final Response response = await router(request);
     if (response.statusCode != 404) return response;
     return jsonResponse(404, <String, Object?>{
@@ -81,7 +81,7 @@ Handler createApiHandler({
         'message': 'The requested endpoint was not found.',
       },
     });
-  };
+  }
 
   final ServerMiddleware middleware = ServerMiddleware(
     config: config,

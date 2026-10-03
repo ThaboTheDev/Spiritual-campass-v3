@@ -1,5 +1,3 @@
-library tshk_api;
-
 export 'app.dart' show createApiHandler, createProductionHandler;
 export 'src/auth/jwt_verifier.dart';
 export 'src/config.dart';

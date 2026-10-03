@@ -2,8 +2,7 @@ import 'dart:io';
 
 import 'package:shelf/shelf_io.dart' as shelf_io;
 
-import '../lib/app.dart';
-import '../lib/src/config.dart';
+import 'package:tshk_api/tshk_api.dart';
 
 Future<void> main() async {
   final ApiConfig config = ApiConfig.fromEnvironment();

@@ -24,7 +24,7 @@ void main() {
       ),
       FixedClock(now),
     );
-    const MemberRecord member = MemberRecord(
+    final MemberRecord member = MemberRecord(
       id: '550e8400-e29b-41d4-a716-446655440000',
       email: 'member@example.test',
       status: MemberStatus.trialing,
@@ -83,7 +83,7 @@ void main() {
       ),
       FixedClock(DateTime.utc(2026, 2, 3, 23)),
     );
-    const MemberRecord member = MemberRecord(
+    final MemberRecord member = MemberRecord(
       id: '550e8400-e29b-41d4-a716-446655440000',
       email: null,
       status: MemberStatus.expired,

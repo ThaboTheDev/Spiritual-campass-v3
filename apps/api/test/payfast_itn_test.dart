@@ -36,7 +36,7 @@ List<FormFieldPair> _notification({
     const FormFieldPair('item_name', 'TSHK Compass'),
     FormFieldPair('amount_gross', amount),
     const FormFieldPair('amount_fee', '0.00'),
-    const FormFieldPair('amount_net', amount),
+    FormFieldPair('amount_net', amount),
     FormFieldPair('custom_str1', memberId),
     const FormFieldPair('token', '00000000-0000-4000-8000-000000000001'),
     FormFieldPair('merchant_id', merchant),
