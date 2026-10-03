@@ -3,7 +3,7 @@ publish_to: none
 
 # All package dependencies are pinned exactly in the member pubspecs.
 environment:
-  sdk: '>=3.9.0 <4.0.0'
+  sdk: '>=3.11.0 <4.0.0'
 
 workspace:
   - packages/core

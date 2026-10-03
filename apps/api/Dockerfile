@@ -1,6 +1,6 @@
 # Build with the pinned Flutter/Dart toolchain. The API itself is plain Dart;
 # the Flutter image supplies Dart for resolving the shared workspace packages.
-FROM ghcr.io/cirruslabs/flutter:3.38.0 AS build
+FROM ghcr.io/cirruslabs/flutter:3.41.0 AS build
 WORKDIR /workspace
 COPY pubspec.yaml ./
 COPY packages/core/pubspec.yaml packages/core/pubspec.yaml

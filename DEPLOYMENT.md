@@ -2,7 +2,7 @@
 
 ## Toolchain and workspace
 
-Use Dart 3.9+ and Flutter 3.38+ (CI pins Flutter 3.38.0). Exact direct dependency versions are kept in these files:
+Use Dart 3.11+ and Flutter 3.41+ (CI pins Flutter 3.41.0). Exact direct dependency versions are kept in these files:
 
 - `pubspec.yaml` — Pub workspace root.
 - `packages/core/pubspec.yaml` — pure Dart shared core.

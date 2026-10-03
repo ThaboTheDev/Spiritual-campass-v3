@@ -11,7 +11,7 @@ A Dart monorepo for a Flutter compass PWA/mobile client, a pure-Dart geospatial 
 - `ASSUMPTIONS.md` — all external data, sensor, PayFast, privacy, and store-policy assumptions.
 - `DEPLOYMENT.md` — local setup and Cloud Run/Fly.io/Render/static PWA deployment.
 
-The project uses a Dart Pub workspace (Dart 3.9+ / Flutter 3.38+). Dependency versions are exact in each package's `pubspec.yaml`.
+The project uses a Dart Pub workspace (Dart 3.11+ / Flutter 3.41+). Dependency versions are exact in each package's `pubspec.yaml`.
 
 ## Checks
 
