@@ -1,0 +1,55 @@
+#!/usr/bin/env sh
+# Minimal checked-in launcher for the pinned Gradle distribution. It avoids a
+# wrapper JAR while preserving the same version/checksum pin as gradle-wrapper.properties.
+set -eu
+
+APP_HOME=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+GRADLE_VERSION=8.13
+GRADLE_SHA256=20f1b1176237254a6fc204d8434196fa11a4cfb387567519c61556e8710aed78
+GRADLE_USER_HOME=${GRADLE_USER_HOME:-"${HOME:?HOME must be set}/.gradle"}
+DIST_ROOT="$GRADLE_USER_HOME/wrapper/dists/tshk-gradle-$GRADLE_VERSION"
+GRADLE_BIN="$DIST_ROOT/gradle-$GRADLE_VERSION/bin/gradle"
+
+if [ ! -x "$GRADLE_BIN" ]; then
+  mkdir -p "$DIST_ROOT"
+  TMP_DIR="$DIST_ROOT/.install-$$"
+  ZIP="$TMP_DIR/gradle-$GRADLE_VERSION-bin.zip"
+  rm -rf "$TMP_DIR"
+  mkdir -p "$TMP_DIR"
+  URL="https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+
+  if command -v curl >/dev/null 2>&1; then
+    curl --fail --location --retry 3 --output "$ZIP" "$URL"
+  elif command -v wget >/dev/null 2>&1; then
+    wget --tries=3 --output-document="$ZIP" "$URL"
+  else
+    echo 'curl or wget is required to download the pinned Gradle distribution.' >&2
+    exit 1
+  fi
+
+  if command -v sha256sum >/dev/null 2>&1; then
+    ACTUAL=$(sha256sum "$ZIP" | cut -d ' ' -f 1)
+  elif command -v shasum >/dev/null 2>&1; then
+    ACTUAL=$(shasum -a 256 "$ZIP" | cut -d ' ' -f 1)
+  else
+    echo 'sha256sum or shasum is required to verify Gradle.' >&2
+    exit 1
+  fi
+  if [ "$ACTUAL" != "$GRADLE_SHA256" ]; then
+    echo 'Pinned Gradle distribution checksum mismatch; refusing to execute it.' >&2
+    rm -rf "$TMP_DIR"
+    exit 1
+  fi
+  if ! command -v unzip >/dev/null 2>&1; then
+    echo 'unzip is required to install the pinned Gradle distribution.' >&2
+    exit 1
+  fi
+  unzip -q "$ZIP" -d "$TMP_DIR"
+  rm -f "$ZIP"
+  rm -rf "$DIST_ROOT/gradle-$GRADLE_VERSION"
+  mv "$TMP_DIR/gradle-$GRADLE_VERSION" "$DIST_ROOT/gradle-$GRADLE_VERSION"
+  rmdir "$TMP_DIR" 2>/dev/null || true
+fi
+
+cd "$APP_HOME"
+exec "$GRADLE_BIN" "$@"

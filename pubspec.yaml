@@ -1,0 +1,11 @@
+name: tshk_compass_workspace
+publish_to: none
+
+# All package dependencies are pinned exactly in the member pubspecs.
+environment:
+  sdk: '>=3.11.0 <4.0.0'
+
+workspace:
+  - packages/core
+  - apps/api
+  - apps/app
